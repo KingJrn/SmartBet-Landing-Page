@@ -1,0 +1,19 @@
+/*  varaibles */
+
+:root{
+    /* colors */
+    --primary-color: #FFFFFF;
+    --secondary-color: #000000;
+    --header-color: #FFC700;
+    --primary-background:#0A0D28;
+    --secondary-background:#040612;
+
+    /* font-sizes  */
+    --font-size: 16px;
+    --large-header-size: 24px;
+    --large-size: 20px;
+    --small-header-size: 18px;
+    --small-text-size: 14px;
+}
+
+

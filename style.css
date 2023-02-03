@@ -1,0 +1,446 @@
+/* Import variables for mostly color codes */
+
+@import url("assets/css/variables.css");
+
+/* Main Css Styles */
+/* custom font */
+@font-face {
+    font-family: "nemorosa";
+    src: url("assets/fonts/Fontspring-DEMO-nemorosa-regular.otf") format("truetype");
+}
+
+/* Reset styles */
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Normalize styles */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* Typography */
+
+body {
+    font-family: "nemorosa", Arial, sans-serif;
+    font-size: var(--font-size);
+    color: var(--primary-color) !important;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    color: var(--header-color) !important;
+}
+
+h1 {
+    font-size: var(--large-header-size);
+}
+
+h2 {
+    font-size: var(--large-size);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-size: var(--small-header-size);
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p,
+h1 {
+    word-spacing: 2px;
+}
+
+/* targetting specific Elements */
+div#main_body_wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 2rem;
+    background-color: var(--primary-background);
+}
+
+header {
+    background-color: var(--secondary-background);
+    width: 80%;
+    height: 70vh;
+    padding-inline: 4rem;
+    padding-top: 5rem;
+    border-radius: 50px;
+    margin: auto;
+}
+
+nav.navbar.navbar-expand-lg.bg-body-tertiary {
+    background-color: var(--secondary-background) !important;
+}
+
+a.navbar-brand {
+    width: 5%;
+}
+
+.intro {
+    position: relative;
+}
+
+.intro p {
+    font-size: --small-header-size;
+    width: 60%;
+}
+
+a.play_now {
+    display: inline-block;
+    padding: 5px 20px;
+    background-color: var(--header-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--small-text-size);
+    font-weight: bold;
+}
+a.play_now:hover{
+    background-color: var(--secondary-background) !important;
+    color: var(--primary-color) !important;
+    border: 1px solid var(--header-color) !important;
+}
+
+a.play_now+a.play_now {
+    padding: 5px 10px;
+    margin-left: 2%;
+}
+
+.tv_ball {
+    position: absolute;
+    top: -90px;
+    right: 0%;
+    width: 40%;
+}
+
+.tv_ball img {
+    transform: scaleX(-1);
+}
+
+/* WELCOME SECTION */
+
+#welcome_section {
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.content_warpper {
+    background-color: var(--secondary-background);
+    width: 70%;
+    height: 70vh;
+    border-radius: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_contents p {
+    margin-bottom: 1.5rem;
+}
+
+.gamble_options {
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    margin: auto;
+    width: 60%;
+}
+
+.assets {
+    width: 35%;
+    height: 40vh;
+    border: 4px solid var(--header-color);
+    border-radius: 50%;
+    background-color: var(--secondary-background);
+    border-radius: 5rem;
+}
+
+.assets img {
+    max-width: 100%;
+    height: auto;
+    transform: translateY(60px);
+}
+
+.bitcoin img {
+    max-width: 80%;
+    margin-left: 20px;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-color: var(--secondary-background);
+}
+
+.footer_wrapper h1 {
+    color: white ! important;
+}
+
+.socials {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials img {
+    max-width: 60%;
+}
+
+.logo {
+    width: 50px;
+}
+
+.company_name {
+    font-size: var(--large-header-size);
+    margin-left: 15px;
+    color: var(--primary-color);
+}
+
+.footer-bottom p,
+a {
+    font-size: var(--small-text-size);
+}
+
+/* MEDIA QUERIES */
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+
+@media (max-width: 1399.98px) {}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+
+@media (max-width: 991.98px) {
+    header {
+        height: 40vh;
+    }
+
+    .tv_ball {
+        position: absolute;
+        top: 0px;
+        right: 0%;
+        width: 40%;
+    }
+
+    .content_warpper {
+        height: 45vh;
+    }
+
+    .assets {
+        height: 20vh;
+        border-radius: 3rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    header {
+        height: 50vh;
+        padding-top: 3rem;
+    }
+
+    a.navbar-brand {
+        width: 12%;
+    }
+
+    .tv_ball {
+        top: -50px;
+        right: 0%;
+        width: 45%;
+    }
+
+    .intro p {
+        font-size: 10px;
+        width: 50%;
+    }
+
+    .intro h1 {
+        font-size: 20px;
+    }
+
+    a.play_now {
+        font-size: 10px;
+    }
+
+    .content_warpper {
+        width: 70%;
+        height: 55vh;
+
+    }
+
+    .main_contents.w-80 {
+        margin-top: 12px;
+    }
+
+    .main_contents.w-80 h2 {
+        font-size: 20px;
+    }
+
+    .main_contents p {
+        font-size: 12px;
+    }
+
+    .assets {
+        height: 35vh;
+        border-radius: 3rem;
+    }
+
+    .footer_wrapper h1 {
+        font-size: 20px;
+    }
+
+    .socials {
+        width: 35px;
+        height: 35px;
+    }
+
+    .company_name {
+        font-size: 20px;
+    }
+
+}
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    header {
+        width: 95%;
+    }
+
+    .tv_ball {
+        top: 0px;
+
+    }
+
+    a.play_now {
+        font-size: 8px;
+    }
+
+    .main_contents p {
+        font-size: 10px;
+    }
+
+    .main_contents h2 {
+        font-size: 18px;
+    }
+
+    .content_warpper {
+        width: 95%;
+        height: 55vh;
+    }
+
+    .assets {
+        height: 30vh;
+        border-radius: 2rem;
+    }
+}
+
+@media (max-width: 430px) {
+
+    header {
+        padding-inline: 2rem;
+        height: 40vh;
+    }
+
+    .assets {
+        width: 100%;
+        height: 18vh;
+    }
+
+    .assets img {
+        transform: translateY(47px);
+    }
+
+    .bitcoin img {
+        margin-left: 10px;
+    }
+
+    .footer_wrapper h1 {
+        font-size: 18px;
+    }
+
+    .socials {
+        width: 25px;
+        height: 25px;
+    }
+
+    .company_name {
+        font-size: 18px;
+    }
+
+    .content_warpper {
+        height: 45vh;
+    }
+}
+
+@media (max-width: 380px) {
+
+    header {
+        padding-top: 1rem;
+    }
+
+    .assets img {
+        transform: translateY(33px);
+    }
+
+    .bitcoin img {
+        margin-left: 10px;
+    }
+
+    .footer_wrapper h1 {
+        font-size: 18px;
+    }
+
+    .socials {
+        width: 25px;
+        height: 25px;
+    }
+
+    .company_name {
+        font-size: 18px;
+    }
+
+    .content_warpper {
+        height: 45vh;
+    }
+}
