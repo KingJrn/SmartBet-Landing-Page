@@ -92,7 +92,7 @@ div#main_body_wrapper {
 header {
     background-color: var(--secondary-background);
     width: 80%;
-    height: 70vh;
+    padding-bottom: 11rem;
     padding-inline: 4rem;
     padding-top: 5rem;
     border-radius: 50px;
@@ -127,7 +127,8 @@ a.play_now {
     font-size: var(--small-text-size);
     font-weight: bold;
 }
-a.play_now:hover{
+
+a.play_now:hover {
     background-color: var(--secondary-background) !important;
     color: var(--primary-color) !important;
     border: 1px solid var(--header-color) !important;
@@ -159,12 +160,15 @@ a.play_now+a.play_now {
 .content_warpper {
     background-color: var(--secondary-background);
     width: 70%;
-    height: 70vh;
+    padding-bottom: 6rem;
     border-radius: 50px;
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.main_contents {
+    width: 60%;
 }
 
 .main_contents p {
@@ -181,9 +185,8 @@ a.play_now+a.play_now {
 
 .assets {
     width: 35%;
-    height: 40vh;
+    height: 19rem;
     border: 4px solid var(--header-color);
-    border-radius: 50%;
     background-color: var(--secondary-background);
     border-radius: 5rem;
 }
@@ -240,6 +243,8 @@ a {
 
 /* MEDIA QUERIES */
 
+
+
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
 
 @media (max-width: 1399.98px) {}
@@ -252,31 +257,27 @@ a {
 
 @media (max-width: 991.98px) {
     header {
-        height: 40vh;
+        padding-bottom: 9rem;
     }
 
     .tv_ball {
-        position: absolute;
         top: 0px;
-        right: 0%;
-        width: 40%;
-    }
-
-    .content_warpper {
-        height: 45vh;
+        width: 30%;
     }
 
     .assets {
-        height: 20vh;
         border-radius: 3rem;
+        height: 15rem;
     }
 }
+
+@media (orientation: landscape) and (max-width: 575.98px) {}
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     header {
-        height: 50vh;
         padding-top: 3rem;
+        padding-bottom: 5rem;
     }
 
     a.navbar-brand {
@@ -284,9 +285,8 @@ a {
     }
 
     .tv_ball {
-        top: -50px;
-        right: 0%;
-        width: 45%;
+        top: -25px;
+        width: 40%;
     }
 
     .intro p {
@@ -304,11 +304,14 @@ a {
 
     .content_warpper {
         width: 70%;
-        height: 55vh;
-
+        padding-bottom: 3rem;
     }
 
-    .main_contents.w-80 {
+    .main_contents h2 {
+        font-size: 20px;
+    }
+
+    .main_contents {
         margin-top: 12px;
     }
 
@@ -321,8 +324,7 @@ a {
     }
 
     .assets {
-        height: 35vh;
-        border-radius: 3rem;
+        height: 13rem;
     }
 
     .footer_wrapper h1 {
@@ -356,6 +358,10 @@ a {
         font-size: 8px;
     }
 
+    .main_contents {
+        width: 70%;
+    }
+
     .main_contents p {
         font-size: 10px;
     }
@@ -366,29 +372,44 @@ a {
 
     .content_warpper {
         width: 95%;
-        height: 55vh;
+    }
+
+    .bitcoin img {
+        margin-left: 10px;
+    }
+
+    .assets img {
+        transform: translateY(48px);
     }
 
     .assets {
-        height: 30vh;
+        height: 10rem;
         border-radius: 2rem;
     }
+
+    a.play_now+a.play_now {
+        margin-top: 5px;
+    }
 }
+
+
+
+
 
 @media (max-width: 430px) {
 
     header {
         padding-inline: 2rem;
-        height: 40vh;
     }
+
 
     .assets {
         width: 100%;
-        height: 18vh;
+        height: 8rem;
     }
 
     .assets img {
-        transform: translateY(47px);
+        transform: translateY(37px);
     }
 
     .bitcoin img {
@@ -407,16 +428,20 @@ a {
     .company_name {
         font-size: 18px;
     }
-
-    .content_warpper {
-        height: 45vh;
-    }
 }
 
 @media (max-width: 380px) {
 
     header {
         padding-top: 1rem;
+    }
+
+    .intro h1 {
+        font-size: 16px;
+    }
+
+    .main_contents h2 {
+        font-size: 16px;
     }
 
     .assets img {
@@ -438,9 +463,5 @@ a {
 
     .company_name {
         font-size: 18px;
-    }
-
-    .content_warpper {
-        height: 45vh;
     }
 }
