@@ -243,14 +243,12 @@ a {
 
 /* MEDIA QUERIES */
 
-
-
-/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
-
-@media (max-width: 1399.98px) {}
-
-/* `xl` applies to large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {}
+/* devices above (768px) */
+@media (min-width: 767.98px) {
+    .mt-4.w-50 {
+        height: 4vw;
+    }
+}
 
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
@@ -271,8 +269,6 @@ a {
     }
 }
 
-@media (orientation: landscape) and (max-width: 575.98px) {}
-
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     header {
@@ -290,16 +286,21 @@ a {
     }
 
     .intro p {
-        font-size: 10px;
+        font-size: 12.5px;
         width: 50%;
     }
 
     .intro h1 {
         font-size: 20px;
     }
-
+    .mt-4.w-50{
+        height: 4rem;
+display: flex;
+justify-content: center;
+align-items: center;
+    }
     a.play_now {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .content_warpper {
@@ -320,7 +321,7 @@ a {
     }
 
     .main_contents p {
-        font-size: 12px;
+        font-size: 12.5px;
     }
 
     .assets {
@@ -355,15 +356,11 @@ a {
     }
 
     a.play_now {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .main_contents {
         width: 70%;
-    }
-
-    .main_contents p {
-        font-size: 10px;
     }
 
     .main_contents h2 {
