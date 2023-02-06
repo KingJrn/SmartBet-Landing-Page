@@ -296,12 +296,17 @@ a {
     .mt-4.w-50{
         height: 4rem;
 display: flex;
-justify-content: center;
+flex-wrap: wrap;
 align-items: center;
+gap: 10%;
     }
     a.play_now {
         font-size: 12px;
     }
+    a.play_now + a.play_now {
+        padding: 5px 10px;
+        margin-left: 0% !important;
+      }
 
     .content_warpper {
         width: 70%;
@@ -354,11 +359,6 @@ align-items: center;
         top: 0px;
 
     }
-
-    a.play_now {
-        font-size: 10px;
-    }
-
     .main_contents {
         width: 70%;
     }
@@ -382,10 +382,6 @@ align-items: center;
     .assets {
         height: 10rem;
         border-radius: 2rem;
-    }
-
-    a.play_now+a.play_now {
-        margin-top: 5px;
     }
 }
 
