@@ -295,10 +295,10 @@ a {
     }
     .mt-4.w-50{
         height: 4rem;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-gap: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10%;
     }
     a.play_now {
         font-size: 12px;
