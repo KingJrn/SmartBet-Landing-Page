@@ -19,11 +19,11 @@ h4,
 h5,
 h6,
 p {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 
@@ -41,9 +41,9 @@ html {
 /* Typography */
 
 body {
+    color: var(--primary-color) !important;
     font-family: "nemorosa", Arial, sans-serif;
     font-size: var(--font-size);
-    color: var(--primary-color) !important;
     line-height: 1.5;
 }
 
@@ -53,8 +53,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: bold;
     color: var(--header-color) !important;
+    font-weight: bold;
 }
 
 h1 {
@@ -83,20 +83,20 @@ h1 {
 
 /* targetting specific Elements */
 div#main_body_wrapper {
-    width: 100%;
+    background-color: var(--primary-background);
     min-height: 100vh;
     padding-top: 2rem;
-    background-color: var(--primary-background);
+    width: 100%;
 }
 
 header {
     background-color: var(--secondary-background);
-    width: 80%;
+    border-radius: 50px;
+    margin: auto;
     padding-bottom: 11rem;
     padding-inline: 4rem;
     padding-top: 5rem;
-    border-radius: 50px;
-    margin: auto;
+    width: 80%;
 }
 
 nav.navbar.navbar-expand-lg.bg-body-tertiary {
@@ -117,32 +117,32 @@ a.navbar-brand {
 }
 
 a.play_now {
-    display: inline-block;
-    padding: 5px 20px;
     background-color: var(--header-color);
-    color: var(--secondary-color);
     border: none;
     border-radius: 5px;
+    color: var(--secondary-color);
     cursor: pointer;
+    display: inline-block;
     font-size: var(--small-text-size);
     font-weight: bold;
+    padding: 5px 20px;
 }
 
 a.play_now:hover {
     background-color: var(--secondary-background) !important;
-    color: var(--primary-color) !important;
     border: 1px solid var(--header-color) !important;
+    color: var(--primary-color) !important;
 }
 
 a.play_now+a.play_now {
-    padding: 5px 10px;
     margin-left: 2%;
+    padding: 5px 10px;
 }
 
 .tv_ball {
     position: absolute;
-    top: -90px;
     right: 0%;
+    top: -90px;
     width: 40%;
 }
 
@@ -153,18 +153,18 @@ a.play_now+a.play_now {
 /* WELCOME SECTION */
 
 #welcome_section {
-    width: 100%;
     padding-bottom: 1rem;
+    width: 100%;
 }
 
 .content_warpper {
     background-color: var(--secondary-background);
-    width: 70%;
-    padding-bottom: 6rem;
     border-radius: 50px;
-    margin: auto;
     display: flex;
     justify-content: center;
+    margin: auto;
+    padding-bottom: 6rem;
+    width: 70%;
 }
 
 .main_contents {
@@ -177,35 +177,37 @@ a.play_now+a.play_now {
 
 .gamble_options {
     display: flex;
-    justify-content: center;
     gap: 15%;
+    justify-content: center;
     margin: auto;
     width: 60%;
 }
 
 .assets {
-    width: 35%;
-    height: 19rem;
-    border: 4px solid var(--header-color);
     background-color: var(--secondary-background);
+    border: 4px solid var(--header-color);
     border-radius: 5rem;
+    height: 19rem;
+    width: 35%;
 }
 
 .assets img {
-    max-width: 100%;
     height: auto;
-    transform: translateY(60px);
+    max-width: 100%;
+    /* transform: translateY(60px); */
+    position: relative;
+    top: 30px;
 }
 
 .bitcoin img {
-    max-width: 80%;
     margin-left: 20px;
+    max-width: 80%;
 }
 
 /* footer */
 footer {
-    width: 100%;
     background-color: var(--secondary-background);
+    width: 100%;
 }
 
 .footer_wrapper h1 {
@@ -213,13 +215,13 @@ footer {
 }
 
 .socials {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--primary-color);
-    display: flex;
-    justify-content: center;
     align-items: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
 }
 
 .socials img {
@@ -231,9 +233,9 @@ footer {
 }
 
 .company_name {
+    color: var(--primary-color);
     font-size: var(--large-header-size);
     margin-left: 15px;
-    color: var(--primary-color);
 }
 
 .footer-bottom p,
@@ -242,6 +244,11 @@ a {
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 1200px) {
+    .assets {
+        height: 15rem;
+    }
+}
 
 /* devices above (768px) */
 @media (min-width: 767.98px) {
@@ -265,15 +272,15 @@ a {
 
     .assets {
         border-radius: 3rem;
-        height: 15rem;
+        height: 12rem;
     }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
     header {
-        padding-top: 3rem;
         padding-bottom: 5rem;
+        padding-top: 3rem;
     }
 
     a.navbar-brand {
@@ -293,24 +300,27 @@ a {
     .intro h1 {
         font-size: 20px;
     }
-    .mt-4.w-50{
-        height: 4rem;
+
+    .mt-4.w-50 {
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
         gap: 10%;
+        height: 4rem;
     }
+
     a.play_now {
         font-size: 12px;
     }
-    a.play_now + a.play_now {
-        padding: 5px 10px;
+
+    a.play_now+a.play_now {
         margin-left: 0% !important;
-      }
+        padding: 5px 10px;
+    }
 
     .content_warpper {
-        width: 70%;
         padding-bottom: 3rem;
+        width: 70%;
     }
 
     .main_contents h2 {
@@ -330,7 +340,7 @@ a {
     }
 
     .assets {
-        height: 13rem;
+        height: 10rem;
     }
 
     .footer_wrapper h1 {
@@ -338,8 +348,8 @@ a {
     }
 
     .socials {
-        width: 35px;
         height: 35px;
+        width: 35px;
     }
 
     .company_name {
@@ -359,6 +369,7 @@ a {
         top: 0px;
 
     }
+
     .main_contents {
         width: 70%;
     }
@@ -375,13 +386,9 @@ a {
         margin-left: 10px;
     }
 
-    .assets img {
-        transform: translateY(48px);
-    }
-
     .assets {
-        height: 10rem;
         border-radius: 2rem;
+        height: 8rem;
     }
 }
 
@@ -397,13 +404,10 @@ a {
 
 
     .assets {
+        height: 7rem;
         width: 100%;
-        height: 8rem;
     }
 
-    .assets img {
-        transform: translateY(37px);
-    }
 
     .bitcoin img {
         margin-left: 10px;
@@ -414,8 +418,8 @@ a {
     }
 
     .socials {
-        width: 25px;
         height: 25px;
+        width: 25px;
     }
 
     .company_name {
@@ -437,10 +441,6 @@ a {
         font-size: 16px;
     }
 
-    .assets img {
-        transform: translateY(33px);
-    }
-
     .bitcoin img {
         margin-left: 10px;
     }
@@ -450,8 +450,8 @@ a {
     }
 
     .socials {
-        width: 25px;
         height: 25px;
+        width: 25px;
     }
 
     .company_name {
